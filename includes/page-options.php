@@ -61,11 +61,6 @@ function wpsend_options_page() {
 		<h2>WP Send <span class="dashicons dashicons-airplane"></span></h2>
 
 		<?php
-        $wpsend_noreply = get_option('wpsend_noreply');
-        if (empty($wpsend_noreply)) {
-            echo '<div id="message" class="error notice is-dismissible"><p><a href="' . admin_url('edit.php?post_type=' . WPSEND_CPT . '&page=wpsend_options_page&tab=wpsend_email') . '">' . __('You have not set a dedicated email address.', 'wp-send') . '</a></p></div>';
-        }
-
 		$active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'wpsend_dashboard';
 		$tab = admin_url('edit.php?post_type=' . WPSEND_CPT . '&page=wpsend_options_page&tab=wpsend_');
 		?>
@@ -82,9 +77,8 @@ function wpsend_options_page() {
 		<?php if ($active_tab === 'wpsend_dashboard') { ?>
             <h2>Thank you for using WP Send!</h2>
 
-            <p>For support, feature requests and bug reporting, please visit the <a href="https://getbutterfly.com/wordpress-plugins/wp-send/" rel="external noopener follow">official website</a>. <a href="https://getbutterfly.com/support/documentation/wp-send-documentation/" class="button button-secondary">WP Send Documentation</a></p>
+            <p>For support, feature requests and bug reporting, please visit the <a href="https://getbutterfly.com/wordpress-plugins/" rel="external noopener follow">official website</a>. <a href="https://getbutterfly.com/knowledge-base/" class="button button-secondary">WP Send Documentation</a></p>
 
-            <h2>About WP Send</h2>
             <p>
                 You are using <b>WP Send</b> version <b><?php echo WPSEND_VERSION; ?></b> on PHP version <?php echo PHP_VERSION; ?>.
                 <br>&copy;<?php echo date('Y'); ?> <a href="https://getbutterfly.com/" rel="external"><strong>getButterfly</strong>.com</a> &middot; <small>Code wrangling since 2005</small>
@@ -94,6 +88,21 @@ function wpsend_options_page() {
             <p>WP Send plugin uses one shortcode: <code>[send]</code>.</p>
 
             <p>Add the <code>[send limit="32" expire="7"]</code> shortcode to a post or a page, where <code>limit</code> is the filesize limit (in megabytes) and <code>expire</code> is the expiry/removal date (in days).</p>
+
+        
+            <h3>Licence Key</h3>
+
+            <p>
+                <code>15e852ee16f1167145a9d9067403277c3caea46e</code>
+            </p>
+            <p>
+                <span class="dashicons dashicons-warning"></span> Use this licence key with your <b>GitHub Updater</b> plugin.
+            </p>
+            <hr>
+            <p>
+                <small>Your <b>WP Send</b> licence key is used to verify your support package, enable automatic updates and receive support.</small><br>
+                <small>This plugin does not send any information, save for your unique API Key, to any third-party services.</small>
+            </p>
 		<?php } else if ($active_tab === 'wpsend_settings') { ?>
 			<form method="post" action="">
     			<h3 class="title"><?php _e('WP Send General Settings', 'wp-send'); ?></h3>
