@@ -6,7 +6,7 @@ Description: WP Send is the simplest way to send your files around the world. Sh
 Author: Ciprian Popescu
 Author URI: https://getbutterfly.com/
 GitHub Plugin URI: getbutterfly/wp-send
-Version: 1.0.2
+Version: 1.0.3
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: wp-send
@@ -30,7 +30,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-define('WPSEND_VERSION', '1.0.2');
+define('WPSEND_VERSION', '1.0.3');
 define('WPSEND_CPT', 'transfer');
 
 
@@ -328,7 +328,7 @@ function wpsend_display_form($atts) {
             }
 
             $wpsend_label_success = get_option('wpsend_label_success');
-            echo '<p class="wpsend-confirmation"><strong>' . esc_html($wpsend_label_success) . '</strong></p>';
+            echo '<p class="wpsend-confirmation has-black-color has-light-green-cyan-background-color has-text-color has-background">' . esc_html($wpsend_label_success) . '</p>';
             wpsend_conversion(get_the_ID());
         }
     }

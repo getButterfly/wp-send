@@ -5,7 +5,7 @@ License: GPLv3
 Requires at least: 5.5
 Tested up to: 5.6
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,6 +20,9 @@ WP Send is the simplest way to send your files around the world. Share large fil
 3. A new WP Send menu will appear in WordPress with options, and general help
 
 == Changelog ==
+
+= 1.0.3 =
+* UPDATE: Restyled email confirmation using the block editor styles
 
 = 1.0.2 =
 * FEATURE: Added automatic GitHub update
