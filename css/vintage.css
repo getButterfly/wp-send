@@ -1,0 +1,40 @@
+#wp-send-filesize-error {
+    display: none;
+}
+
+.wpsend-container select,
+.wpsend-container input[type="text"],
+.wpsend-container input[type="email"],
+.wpsend-container input[type="submit"],
+.wpsend-container textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 8px;
+	margin-bottom: 4px;
+    width: auto;
+}
+.wpsend-container select,
+.wpsend-container input[type="text"],
+.wpsend-container input[type="email"],
+.wpsend-container textarea {
+    border: 1px solid rgba(169, 169, 169, 0.75);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.wpsend-container input[type="checkbox"] {
+    margin: 0;
+}
+.wpsend-container {
+    position: relative;
+}
+
+.wpsend-container #captcha {
+	vertical-align: middle;
+}
+
+a.dropbox-dropin-btn,
+a.dropbox-dropin-btn:link,
+a.dropbox-dropin-btn:visited,
+a.dropbox-dropin-btn:hover {
+    color: #636363;
+}
