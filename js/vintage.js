@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
     if (document.getElementById('file')) {
         let uploadField = document.getElementById('file');
 
@@ -24,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('selected-file').value = links.join(',');
                 });
             },
-            multiselect: true,
-            //sizeLimit: 1024,
-            //extensions: ["images"]
+            multiselect: true
         };
 
         let button = Dropbox.createChooseButton(options); document.getElementById('droptarget').appendChild(button);

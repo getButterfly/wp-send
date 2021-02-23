@@ -463,8 +463,6 @@ function wpsend_options_page() {
                 </table>';
 
                 wp_reset_postdata();
-            } else {
-                // no posts found
             }
         }
         ?>

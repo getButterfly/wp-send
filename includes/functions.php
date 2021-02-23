@@ -10,7 +10,7 @@ function wpsend_set_content_type($content_type) {
 }
 
 function wpsend_checkSpam($content) {
-	// innocent until proven guilty
+	// Innocent until proven guilty
 	$isSpam = false;
 	$content = (array) $content;
 
@@ -18,7 +18,7 @@ function wpsend_checkSpam($content) {
 		$wpcom_api_key = get_option('wordpress_api_key');
 
 		if(!empty($wpcom_api_key)) {
-			// set remaining required values for akismet api
+			// Set remaining required values for akismet api
 			$content['user_ip'] = preg_replace('/[^0-9., ]/', '', $_SERVER['REMOTE_ADDR']);
 			$content['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 			$content['referrer'] = $_SERVER['HTTP_REFERER'];
@@ -90,8 +90,6 @@ function wpsend_mail_from($mail_from_email) {
 }
 
 add_filter('wp_mail_from', 'wpsend_mail_from', 1);
-
-
 
 
 
