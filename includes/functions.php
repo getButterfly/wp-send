@@ -140,35 +140,3 @@ function wpsend_delete_all_attached_media($post_id) {
 }
 
 add_action('before_delete_post', 'wpsend_delete_all_attached_media');
-
-
-
-/**
- * TGM Plugin Activation
- */
-function wpsend_register_required_plugins() {
-	$plugins = [
-		[
-			'name' => 'GitHub Updater',
-			'slug' => 'github-updater',
-            'source' => 'https://github.com/afragen/github-updater/archive/master.zip',
-            'external_url' => 'https://github.com/afragen/github-updater',
-			'required' => true,
-        ]
-	];
-
-	$config = [
-		'id' => 'wp-send',
-		'default_path' => '',
-		'menu' => 'tgmpa-install-plugins',
-		'parent_slug' => 'plugins.php',
-		'capability' => 'manage_options',
-		'has_notices' => true,
-		'dismissable' => true,
-		'dismiss_msg' => '',
-		'is_automatic' => false,
-		'message' => ''
-	];
-
-	tgmpa($plugins, $config);
-}

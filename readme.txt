@@ -2,10 +2,10 @@
 Contributors: butterflymedia
 Tags: send, transfer, share, file, email, akismet, dropbox
 License: GPLv3
-Requires at least: 5.5
-Tested up to: 5.7
+Requires at least: 4.9
+Tested up to: 6.3
 Requires PHP: 7.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,6 +20,14 @@ WP Send is the simplest way to send your files around the world. Share large fil
 3. A new WP Send menu will appear in WordPress with options, and general help
 
 == Changelog ==
+
+= 1.0.6 =
+* TODO: Remove Dropbox integration
+* TODO: Implement WPCS
+
+= 1.0.5 =
+* FIX: Removed Git Updater recommendation, as it's no longer working as expected
+* UPDATE: Updated WordPress compatibility
 
 = 1.0.4 =
 * UPDATE: Updated code for CodeCanyon compliance

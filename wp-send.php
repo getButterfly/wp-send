@@ -5,14 +5,13 @@ Plugin URI: https://getbutterfly.com/product/wp-send/
 Description: WP Send is the simplest way to send your files around the world. Share large files with configurable filesizes and expiry dates.
 Author: Ciprian Popescu
 Author URI: https://getbutterfly.com/
-GitHub Plugin URI: getbutterfly/wp-send
-Version: 1.0.4
+Version: 1.0.5
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: wp-send
 
 WP Send
-Copyright (C) 2011-2021 Ciprian Popescu (getbutterfly@gmail.com)
+Copyright (C) 2011-2023 Ciprian Popescu (getbutterfly@gmail.com)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -30,7 +29,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-define('WPSEND_VERSION', '1.0.4');
+define('WPSEND_VERSION', '1.0.5');
 define('WPSEND_CPT', 'transfer');
 
 
@@ -44,15 +43,6 @@ add_action('plugins_loaded', 'wpsend_init');
 include plugin_dir_path(__FILE__) . '/includes/cpt-send.php';
 include plugin_dir_path(__FILE__) . '/includes/functions.php';
 include plugin_dir_path(__FILE__) . '/includes/page-options.php';
-
-
-
-/**
- * Check for updated plugin version
- */
-require_once dirname(__FILE__) . '/classes/class-tgm-plugin-activation.php';
-
-add_action('tgmpa_register', 'wpsend_register_required_plugins');
 
 
 
